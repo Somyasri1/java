@@ -34,5 +34,64 @@ public class Array{
 false
 0
 
-2)
+EXERCISE-2
+a)
+    import java.util.Scanner;
+public class binary{
+    public static void main(String[] args){
+        int n,i,key,low,mid,high,found=0;
+        int a[]=new int[20];
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter n");
+        n=sc.nextInt();
+        System.out.println("enter elements");
+        for(i=0;i<n;i++)
+        a[i]=sc.nextInt();
+        System.out.println("enter key");
+        key=sc.nextInt();
+        low=0;
+        high=n-1;
+        mid=(low+high/2);
+        while(low<=high){
+            mid=(low+high/2);
+            if(a[mid]==key){
+                found=found+1;
+                System.out.println(mid);
+                break;
+            }
+            else if(a[mid]>key){
+                high=mid-1;
+        }
+        else {
+            low=mid+1;
+        }
+        
+    }
+    if(found==1)
+    {
+        System.out.println("key is found at");
+        System.out.println(mid);
+    }
+    else {
+        System.out.println("key not found");
+    }
+}
+}
+
+//o/p//
+
+enter n
+5
+enter elements
+2
+3
+4
+5
+7
+enter key
+3
+1
+key is found at
+1
+
       
